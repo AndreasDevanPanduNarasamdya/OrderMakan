@@ -8,18 +8,16 @@ public class Purchase implements Payable {
     public Purchase(Customer customer, Food food, double payment) {
         this.customer = customer;
         this.food = food;
-        this.finalPrice = food.applyDiscount(food.getPrice()); // use discount
+        this.finalPrice = food.applyDiscount(food.getPrice());
         this.payment = payment;
         this.change = calculateChange(payment);
     }
 
-    // Implement Payable interface
     @Override
     public double calculateChange(double payment) {
         return payment - finalPrice;
     }
 
-    // Getters & Setters
     public Customer getCustomer() { return customer; }
     public Food getFood() { return food; }
     public double getPayment() { return payment; }

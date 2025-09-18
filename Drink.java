@@ -9,7 +9,6 @@ public class Drink extends Food {
     public boolean isCold() { return isCold; }
     public void setCold(boolean isCold) { this.isCold = isCold; }
 
-    // Apply 5% discount for drinks
     @Override
     public double applyDiscount(double price) {
         return price * 0.95;

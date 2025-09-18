@@ -9,7 +9,6 @@ public class MainCourse extends Food {
     public String getPortionSize() { return portionSize; }
     public void setPortionSize(String portionSize) { this.portionSize = portionSize; }
 
-    // Apply 10% discount for main courses
     @Override
     public double applyDiscount(double price) {
         return price * 0.90;
